@@ -1,0 +1,8 @@
+{
+  "spec": {
+    "claimRef": {
+      "name": "mysql-pv-claim"
+    }
+  }
+}
+
