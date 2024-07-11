@@ -5,11 +5,11 @@ metadata:
   namespace: wordpress
 spec:
   capacity:
-    storage: 256Mi
+    storage: 10Gi
   volumeMode: Filesystem
   accessModes:
     - ReadWriteOnce
   persistentVolumeReclaimPolicy: Retain
   hostPath:
-    path: /tmp
+    path: "/tmp"
   storageClassName: standard-rwo

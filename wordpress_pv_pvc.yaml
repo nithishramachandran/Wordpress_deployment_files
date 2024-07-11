@@ -5,13 +5,14 @@ metadata:
   namespace: wordpress
 spec:
   capacity:
-    storage: 100Mi
+    storage: 1Gi
   volumeMode: Filesystem  
   accessModes:
     - ReadWriteOnce  
   persistentVolumeReclaimPolicy: Retain  
   storageClassName: manual 
-
+  hostPath:
+    path: "/mnt/data"
 
 ---
 
@@ -26,6 +27,6 @@ spec:
     - ReadWriteOnce  
   resources:
     requests:
-      storage: 100Mi  
+      storage: 1Gi  
   storageClassName: manual 
   volumeName: wordpress-pv  
